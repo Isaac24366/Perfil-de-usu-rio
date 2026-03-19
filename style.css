@@ -1,10 +1,29 @@
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient();
+    background-color: #555;
     display: flex;
     justify-content: center;
     height: 100vh;
     margin: 0;
+    animation: bgcolor 10s infinite;
+}
+
+@keyframes bgcolor {
+    0% { background-color: #ff0000; }
+    25% { background-color: #ffff00; }
+    50% { background-color: #00ff00; }
+    75% { background-color: #0090ff; }
+    100% { background-color: #ff0000; }
+}
+
+.profile-img {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .profile-card {
@@ -49,6 +68,6 @@ button {
     transition: background 0.3s;
 }
 
-butotn:hover {
+button:hover {
     background: #574B40;
 }
